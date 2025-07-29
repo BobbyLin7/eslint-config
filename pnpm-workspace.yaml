@@ -3,12 +3,15 @@ packages:
   - docs
   - packages/*
   - examples/*
+catalog:
+  defu: ^6.1.4
+  eslint-config-flat-gitignore: ^2.1.0
+  local-pkg: ^1.1.1
 catalogs:
   cli:
     '@antfu/eslint-config': ^4.10.1
     '@antfu/ni': ^24.1.0
     bumpp: ^10.1.0
-    eslint: ^9.22.0
     lint-staged: ^15.5.0
     simple-git-hooks: ^2.11.1
     tsx: ^4.19.3
@@ -17,6 +20,9 @@ catalogs:
     vite: ^6.2.1
   inlined:
     '@antfu/utils': ^9.1.0
+  lint:
+    eslint: ^9.22.0
+    typescript-eslint: ^8.37.0
   testing:
     vitest: ^3.0.8
     vitest-package-exports: ^0.1.1
