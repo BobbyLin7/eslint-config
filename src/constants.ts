@@ -19,6 +19,20 @@ export const GLOB_SRC = [
   ...GLOB_JS_SRC,
 ]
 
+export const GLOB_JSON = '**/*.json'
+export const GLOB_SHOULD_BE_JSONC = [
+  '**/tsconfig.json',
+  '**/tsconfig.*.json',
+  '**/.vscode/*.json',
+]
+export const GLOB_JSON5 = '**/*.json5'
+export const GLOB_JSONC = '**/*.jsonc'
+export const GLOB_JSON_SRC = [
+  GLOB_JSON,
+  GLOB_JSON5,
+  GLOB_JSONC,
+]
+
 export const DEFAULT_IGNORE_FILES = [
   '.gitignore',
   '.eslintignore',

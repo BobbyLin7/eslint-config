@@ -1,7 +1,8 @@
-import type { Linter } from 'eslint'
-import type { Options } from '../option'
 import defu from 'defu'
-import { GLOB_SRC } from '../constants'
+import type { Linter } from 'eslint'
+
+import { GLOB_SRC } from './constants'
+import type { Options } from './option'
 
 type MaybeArray<T> = T | T[]
 type Awaitable<T> = T | Promise<T>
@@ -54,7 +55,7 @@ export async function config(
             return
 
           return mergeConfigs(config)
-        }).filter(i => !!i),
+        }).filter(index => !!index),
       )
     ),
   ]
@@ -76,7 +77,7 @@ async function mergeConfigs(
     return
 
   if (Array.isArray(c))
-    return withFiles(defu({}, ...c.reverse()))
+    return withFiles(defu({}, ...c.toReversed()))
 
   return withFiles(c)
 }

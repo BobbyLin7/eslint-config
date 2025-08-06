@@ -7,7 +7,7 @@ import yaml from 'yaml'
 const IS_READY = false
 
 describe.runIf(IS_READY)('exports-snapshot', async () => {
-  const packages: { name: string, path: string, private?: boolean }[] = JSON.parse(
+  const packages: Array<{ name: string, path: string, private?: boolean }> = JSON.parse(
     await x('pnpm', ['ls', '--only-projects', '-r', '--json']).then(r => r.stdout),
   )
 
