@@ -46,7 +46,7 @@
     "@typescript-eslint/types": "^8.39.0",
     "defu": "catalog:",
     "eslint": "catalog:lint",
-    "eslint-config-flat-gitignore": "catalog:",
+    "eslint-config-flat-gitignore": "catalog:lint",
     "eslint-plugin-antfu": "^3.1.1",
     "eslint-plugin-command": "^3.3.1",
     "eslint-plugin-hyoban": "^0.6.1",

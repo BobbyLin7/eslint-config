@@ -7,10 +7,11 @@ import { isPackageExists } from 'local-pkg'
 import { DEFAULT_IGNORE_FILES, GLOB_EXCLUDE } from './constants'
 
 export type Options = {
-  strict?: boolean
-  restrictedSyntax?: Array<string | { selector: string, message?: string }>
   ignores?: string[]
   ignoreFiles?: string[]
+
+  strict?: boolean
+  restrictedSyntax?: Array<string | { selector: string, message?: string }>
   react?: 'vite' | 'next' | 'remix' | 'expo' | boolean
   tailwindCSS?: boolean | {
     order: boolean
